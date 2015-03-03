@@ -110,8 +110,7 @@
   (add-to-list 'company-backends 'company-jedi))
 
 ;;;###autoload
-(custom-set-variables
- '(jedi:setup-function #'company-jedi--setup))
+(setq jedi:setup-function #'company-jedi--setup)
 
 (provide 'company-jedi)
 ;;; company-jedi.el ends here
