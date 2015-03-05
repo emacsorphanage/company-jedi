@@ -2,6 +2,13 @@
 
 ## Installation
 
+`company-jedi` is available on [MELPA](http://melpa.org).
+
+You can install `company-jedi` with the following command.
+
+<kbd>M-x package-install [RET] company-jedi [RET]</kbd>
+
+
 ## Setup
 
 ```el
