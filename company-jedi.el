@@ -4,7 +4,7 @@
 
 ;; Author: Boy <boyw165@gmail.com>
 ;; Package-Requires: ((emacs "24") (company "0.8.11") (jedi-core "0.2.4"))
-;; Version: 0.01
+;; Version: 0.02
 
 ;; This file is part of GNU Emacs.
 ;;

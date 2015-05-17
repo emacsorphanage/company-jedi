@@ -1,4 +1,7 @@
 Revision history for company-jedi.el
 
+Revision 0.02 2015/05/17 syohex
+   - Update requirement version of jedi for showing document
+
 Revision 0.01 2015/03/05 syohex
    - Initial release
