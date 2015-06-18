@@ -60,6 +60,8 @@
   :type 'boolean
   :group 'company)
 
+(defvar company-jedi--last-candidates nil)
+
 (defun company-jedi-prefix ()
   (ignore-errors
     (and (eq major-mode 'python-mode)
@@ -83,6 +85,7 @@
   (deferred:nextc
     (jedi:call-deferred 'complete)
     (lambda (reply)
+      (setq company-jedi--last-candidates (cl-copy-list reply))
       (let (word
             candidates)
         (dolist (cand reply)
@@ -93,8 +96,21 @@
         (and candidates
              (funcall cb (delete-dups (reverse candidates))))))))
 
+(defun company-jedi--doc-buffer (cand)
+  (let ((matched (cl-loop for c in company-jedi--last-candidates
+                          when (string= (plist-get c :word) cand)
+                          return c)))
+    (when matched
+      (let ((is-instance (string= (plist-get matched :symbol) "i"))
+            (doc (plist-get matched :doc)))
+        (when (and (not is-instance) doc)
+          (with-temp-buffer
+            (insert doc)
+            (goto-char (point-min))
+            (company-doc-buffer (buffer-string))))))))
+
 ;;;###autoload
-(defun company-jedi (command &optional _arg &rest ignored)
+(defun company-jedi (command &optional arg &rest ignored)
   "`company-mode' completion back-end for Python JEDI."
   (interactive (list 'interactive))
   (cl-case command
@@ -102,7 +118,7 @@
     (prefix (company-jedi-prefix))
     (candidates (cons :async 'company-jedi-candidates))
     (meta nil)
-    (doc-buffer nil)
+    (doc-buffer (company-jedi--doc-buffer arg))
     (location nil)))
 
 ;;;###autoload
