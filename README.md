@@ -8,6 +8,8 @@ You can install `company-jedi` with the following command.
 
 <kbd>M-x package-install [RET] company-jedi [RET]</kbd>
 
+**Please do not install jedi package for company users, it is an [auto-complete](https://github.com/auto-complete/auto-complete) plugin of jedi**
+
 
 ## Setup
 
