@@ -97,7 +97,8 @@ Provide completion info according to COMMAND and ARG.  IGNORED, not used."
     (meta (company-jedi-meta arg))
     (annotation (company-jedi-annotation arg))
     (doc-buffer (company-jedi-doc-buffer arg))
-    (location nil)))
+    (location nil)
+    (sorted t)))
 
 (provide 'company-jedi)
 
