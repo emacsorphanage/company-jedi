@@ -1,8 +1,10 @@
-# company-mode completion back-end for Python JEDI [![melpa badge][melpa-badge]][melpa-link] [![melpa stable badge][melpa-stable-badge]][melpa-stable-link]
+# company-jedi.el [![melpa badge][melpa-badge]][melpa-link] [![melpa stable badge][melpa-stable-badge]][melpa-stable-link]
+
+company-mode completion back-end for Python JEDI.
 
 ## Installation
 
-`company-jedi` is available on [MELPA](http://melpa.org).
+`company-jedi` is available on [MELPA](https://melpa.org).
 
 You can install `company-jedi` with the following command.
 
@@ -20,7 +22,7 @@ You can install `company-jedi` with the following command.
 (add-hook 'python-mode-hook 'my/python-mode-hook)
 ```
 
-[melpa-link]: http://melpa.org/#/company-jedi
-[melpa-stable-link]: http://stable.melpa.org/#/company-jedi
-[melpa-badge]: http://melpa.org/packages/company-jedi-badge.svg
-[melpa-stable-badge]: http://stable.melpa.org/packages/company-jedi-badge.svg
+[melpa-link]: https://melpa.org/#/company-jedi
+[melpa-stable-link]: https://stable.melpa.org/#/company-jedi
+[melpa-badge]: https://melpa.org/packages/company-jedi-badge.svg
+[melpa-stable-badge]: https://stable.melpa.org/packages/company-jedi-badge.svg
