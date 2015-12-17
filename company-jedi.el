@@ -1,28 +1,26 @@
 ;;; company-jedi.el --- company-mode completion back-end for Python JEDI -*- lexical-binding: t; -*-
-;;
-;; Copyright (C) 2009, 2011-2014  Free Software Foundation, Inc.
+
+;; Copyright (C) 2015 by Syohei YOSHIDA
 
 ;; Author: Boy <boyw165@gmail.com>
 ;; Package-Requires: ((emacs "24") (cl-lib "0.5") (company "0.8.11") (jedi-core "0.2.7"))
 ;; Version: 0.03
 
-;; This file is part of GNU Emacs.
-;;
-;; GNU Emacs is free software: you can redistribute it and/or modify
+;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
 ;; the Free Software Foundation, either version 3 of the License, or
 ;; (at your option) any later version.
-;;
-;; GNU Emacs is distributed in the hope that it will be useful,
+
+;; This program is distributed in the hope that it will be useful,
 ;; but WITHOUT ANY WARRANTY; without even the implied warranty of
 ;; MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 ;; GNU General Public License for more details.
-;;
+
 ;; You should have received a copy of the GNU General Public License
-;; along with GNU Emacs.  If not, see <http://www.gnu.org/licenses/>.
-;;
+;; along with this program.  If not, see <http://www.gnu.org/licenses/>.
 ;;
 ;;; Commentary:
+;;
 ;;  This is a company-backend for emacs-jedi. Add this backend to the
 ;;  `company-backends' and enjoy the power.
 ;;  e.g.
@@ -32,12 +30,6 @@
 ;;  (add-to-list 'company-backends '(company-jedi company-files))
 ;;
 ;;  Check https://github.com/company-mode/company-mode for details.
-;;
-;;; Change Log:
-;;  0.0.1
-;;  - Initial release.
-;;  - Get candidates through jedi.api.Script.completions().
-;;  - 2 customizations to skip completion when point is in a string or comment.
 ;;
 ;;; Code:
 
