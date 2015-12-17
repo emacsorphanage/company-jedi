@@ -3,7 +3,7 @@
 ;; Copyright (C) 2009, 2011-2014  Free Software Foundation, Inc.
 
 ;; Author: Boy <boyw165@gmail.com>
-;; Package-Requires: ((emacs "24") (cl-lib "0.5") (company "0.8.11") (jedi-core "0.2.5"))
+;; Package-Requires: ((emacs "24") (cl-lib "0.5") (company "0.8.11") (jedi-core "0.2.7"))
 ;; Version: 0.03
 
 ;; This file is part of GNU Emacs.
