@@ -12,6 +12,12 @@ You can install `company-jedi` with the following command.
 
 **Please do not install jedi package for company users, it is an [auto-complete](https://github.com/auto-complete/auto-complete) plugin of jedi**
 
+#### For el-get users
+
+```lisp
+(el-get-bundle elpa:jedi-core)
+(el-get-bundle syohex/emacs-company-jedi :name company-jedi)
+```
 
 ## Setup
 
