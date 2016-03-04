@@ -16,7 +16,7 @@ You can install `company-jedi` with the following command.
 
 ```lisp
 (el-get-bundle elpa:jedi-core)
-(el-get-bundle syohex/emacs-company-jedi :name company-jedi)
+(el-get-bundle company-jedi :depends (company-mode))
 ```
 
 ## Setup
