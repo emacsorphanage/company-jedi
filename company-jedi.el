@@ -1,10 +1,12 @@
-;;; company-jedi.el --- company-mode completion back-end for Python JEDI -*- lexical-binding: t; -*-
+;;; company-jedi.el --- Company-mode completion back-end for Python JEDI -*- lexical-binding: t; -*-
 
-;; Copyright (C) 2015 by Syohei YOSHIDA
+;; Copyright (C) 2015-2020 Syohei YOSHIDA and Neil Okamoto
 
 ;; Author: Boy <boyw165@gmail.com>
-;; Package-Requires: ((emacs "24") (cl-lib "0.5") (company "0.8.11") (jedi-core "0.2.7"))
+;; Maintainer: Neil Okamoto <neil.okamoto+melpa@gmail.com>
+;; URL: https://github.com/emacsorphanage/company-jedi
 ;; Version: 0.04
+;; Package-Requires: ((emacs "24") (cl-lib "0.5") (company "0.8.11") (jedi-core "0.2.7"))
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -21,7 +23,7 @@
 ;;
 ;;; Commentary:
 ;;
-;;  This is a company-backend for emacs-jedi. Add this backend to the
+;;  This is a company-backend for emacs-jedi.  Add this backend to the
 ;;  `company-backends' and enjoy the power.
 ;;  e.g.
 ;;  ;; Basic usage.
@@ -50,9 +52,15 @@
   "Return a candidate from a COMPLETION reply."
   (let ((candidate (plist-get completion :word)))
     (when candidate
-      (put-text-property 0 1 :doc (plist-get completion :doc) candidate)
-      (put-text-property 0 1 :symbol (plist-get completion :symbol) candidate)
-      (put-text-property 0 1 :description (plist-get completion :description) candidate)
+      (put-text-property 0 1
+                         :doc (plist-get completion :doc)
+                         candidate)
+      (put-text-property 0 1
+                         :symbol (plist-get completion :symbol)
+                         candidate)
+      (put-text-property 0 1
+                         :description (plist-get completion :description)
+                         candidate)
       candidate)))
 
 (defun company-jedi-candidates (callback)
@@ -76,9 +84,9 @@
   (company-doc-buffer (get-text-property 0 :doc candidate)))
 
 ;;;###autoload
-(defun company-jedi (command &optional arg &rest ignored)
-  "`company-mode' completion back-end for `jedi-code.el'.
-Provide completion info according to COMMAND and ARG.  IGNORED, not used."
+(defun company-jedi (command &optional arg &rest _ignored)
+  "A `command:company-mode' completion back-end for jedi-core.
+Provide completion info according to COMMAND and ARG."
   (interactive (list 'interactive))
   (cl-case command
     (interactive (company-begin-backend 'company-jedi))
@@ -95,3 +103,8 @@ Provide completion info according to COMMAND and ARG.  IGNORED, not used."
 (provide 'company-jedi)
 
 ;;; company-jedi.el ends here
+
+;; Local Variables:
+;; fill-column: 80
+;; indent-tabs-mode: nil
+;; End:

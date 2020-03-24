@@ -1,6 +1,10 @@
-# company-jedi.el [![melpa badge][melpa-badge]][melpa-link] [![melpa stable badge][melpa-stable-badge]][melpa-stable-link]
+# company-jedi.el
 
-company-mode completion back-end for Python JEDI.
+[![melpa badge][melpa-badge]][melpa-link]
+[![melpa stable badge][melpa-stable-badge]][melpa-stable-link]
+[![circleci badge][circleci-badge]][circleci-link]
+
+`company-mode` completion back-end for Python JEDI.
 
 ## Installation
 
@@ -30,5 +34,7 @@ You can install `company-jedi` with the following command.
 
 [melpa-link]: https://melpa.org/#/company-jedi
 [melpa-stable-link]: https://stable.melpa.org/#/company-jedi
+[circleci-link]: https://app.circleci.com/pipelines/github/emacsorphanage/company-jedi
 [melpa-badge]: https://melpa.org/packages/company-jedi-badge.svg
 [melpa-stable-badge]: https://stable.melpa.org/packages/company-jedi-badge.svg
+[circleci-badge]: https://img.shields.io/circleci/project/github/emacsorphanage/company-jedi.svg

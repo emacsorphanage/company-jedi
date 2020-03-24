@@ -4,4 +4,5 @@
 (package-file "company-jedi.el")
 
 (development
- (depends-on "company-quickhelp"))
+ (depends-on "company-quickhelp")
+ (depends-on "elisp-lint"))
