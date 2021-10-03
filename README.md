@@ -2,7 +2,7 @@
 
 [![melpa badge][melpa-badge]][melpa-link]
 [![melpa stable badge][melpa-stable-badge]][melpa-stable-link]
-[![circleci badge][circleci-badge]][circleci-link]
+[![gh actions badge][gh-actions-badge]][gh-actions-link]
 
 `company-mode` completion back-end for Python JEDI.
 
@@ -34,7 +34,7 @@ You can install `company-jedi` with the following command.
 
 [melpa-link]: https://melpa.org/#/company-jedi
 [melpa-stable-link]: https://stable.melpa.org/#/company-jedi
-[circleci-link]: https://app.circleci.com/pipelines/github/emacsorphanage/company-jedi
+[gh-actions-link]: https://github.com/emacsorphanage/company-jedi/actions
 [melpa-badge]: https://melpa.org/packages/company-jedi-badge.svg
 [melpa-stable-badge]: https://stable.melpa.org/packages/company-jedi-badge.svg
-[circleci-badge]: https://img.shields.io/circleci/project/github/emacsorphanage/company-jedi.svg
+[gh-actions-badge]: https://github.com/emacsorphanage/company-jedi/workflows/ci-checks/badge.svg
